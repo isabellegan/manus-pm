@@ -1,13 +1,17 @@
-import { motion } from 'motion/react';
-import { Linkedin, Mail, Github } from 'lucide-react';
+import { motion } from "motion/react";
+import { Linkedin, Mail, Github } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Mail, label: 'Email', href: 'mailto:isabelle@example.com' },
-    { icon: Linkedin, label: 'LinkedIn', href: '#' },
-    { icon: Github, label: 'GitHub', href: '#' },
+    { icon: Mail, label: "Email", href: "mailto:isabellejgan@gmail.com" },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/isabellegan",
+    },
+    { icon: Github, label: "GitHub", href: "https://github.com/isabellegan" },
   ];
 
   return (
@@ -15,11 +19,11 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div className="space-y-3">
-            <p className="text-muted-foreground max-w-md">
+            <p className="max-w-md text-[var(--forest-green)]">
               Building technology that puts people first.
             </p>
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Isabelle Gan. All rights reserved.
+              © {currentYear} Isabelle Gan
             </p>
           </div>
 
