@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
+import homeImage from "../../assets/speaking-rbc.png";
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
@@ -175,7 +176,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl mb-6">A bit about me</h2>
+            <h2 className="text-3xl md:text-4xl mb-6">🌏 How I Got Here</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-4 text-muted-foreground">
                 <motion.p
@@ -184,10 +185,13 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  I grew up between Toronto, Montreal, and Singapore — which
-                  taught me that the best solutions come from understanding
-                  different perspectives. Now I build AI products that feel
-                  human, not robotic.
+                  Growing up across Singapore, Toronto, and Montreal taught me
+                  to adapt quickly and notice patterns in how people and systems
+                  change with context.
+                  {/* I grew up in Singapore, Toronto, and Montreal, constantly
+                  adapting to new cultures and ways of thinking. Over time, I
+                  learned to observe people and systems, noticing underlying
+                  patterns and what tends to work across contexts. */}
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -195,11 +199,47 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
                 >
-                  When I'm not shipping features, you'll find me on the water
-                  (rowing), on the trail (trekking), or deep in a book about
-                  systems thinking. I believe the same principles that make you
-                  a good athlete make you a good builder: discipline, curiosity,
-                  and showing up every day.
+                  I study Cognitive Science & Computing at the University of
+                  Waterloo, where that early curiosity now guides my focus on
+                  how technology interacts with humans.
+                  {/* I study Cognitive Science and Computing at the University of
+                  Waterloo, where that early curiosity now shapes my focus on
+                  how systems think, respond, and interact with humans.  */}
+                  {/* Now, I study Cognitive Science and Computing at the University
+                  of Waterloo, drawn to questions about how systems think,
+                  respond, and interact with humans.  */}
+                  {/* I now study Cognitive Science and Computing at the University
+                  of Waterloo, where I’m drawn to questions about how systems
+                  think, respond, and interact with humans. */}
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                >
+                  Along the way, I’ve spent time around startups and venture
+                  teams, learning how ideas become companies and how products
+                  evolve under real constraints.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                >
+                  Varsity rowing and marathon training have shaped how I
+                  approach consistency, feedback, and adjustment, a mindset I
+                  carry well beyond sport.
+                  {/* Alongside school, I’m on the varsity rowing team and training
+                  for a marathon, which has shaped how I think about
+                  consistency, feedback, and adjustment. It’s a mindset I carry
+                  well beyond sport. */}
+                  {/* Alongside school, I’m on the varsity rowing
+                  team and preparing for a marathon. Training has shaped how I
+                  think about consistency, feedback, and adjustment. It’s an
+                  approach I carry well beyond sport and into the rest of my
+                  life. */}
                 </motion.p>
               </div>
               <motion.div
@@ -211,9 +251,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--soft-blue)] to-[var(--forest-green)] opacity-10 rounded-2xl transform rotate-3" />
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1630283017802-785b7aff9aac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXNrfGVufDF8fHx8MTc2MTc3OTQxMHww&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Isabelle at work"
-                  className="rounded-2xl w-full h-[400px] object-cover shadow-lg"
+                  src={homeImage}
+                  alt="Isabelle speaking to 500+ students and professionals at RBC"
+                  className="rounded-2xl w-full h-[288px] object-cover shadow-lg"
                 />
               </motion.div>
             </div>
