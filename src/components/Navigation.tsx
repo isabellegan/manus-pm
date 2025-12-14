@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { motion } from "motion/react";
+import { Menu, X } from "lucide-react";
 
 interface NavigationProps {
   currentPage: string;
@@ -16,15 +16,15 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { label: 'About', page: 'about' },
-    { label: 'Work', page: 'work' },
-    { label: 'Writing', page: 'writing' },
-    { label: 'Contact', page: 'contact' },
+    { label: "About", page: "about" },
+    { label: "Work", page: "work" },
+    { label: "Writing", page: "writing" },
+    // { label: 'Contact', page: 'contact' },
   ];
 
   return (
@@ -32,13 +32,15 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-white/95 backdrop-blur-md md:bg-transparent'
+        isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-sm"
+          : "bg-white/95 backdrop-blur-md md:bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <motion.button
-            onClick={() => onNavigate('home')}
+            onClick={() => onNavigate("home")}
             className="text-lg tracking-tight"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -54,8 +56,8 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                 onClick={() => onNavigate(item.page)}
                 className={`relative px-1 py-2 transition-colors ${
                   currentPage === item.page
-                    ? 'text-foreground'
-                    : 'text-muted-foreground hover:text-foreground'
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -97,8 +99,8 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                 }}
                 className={`block w-full text-left px-4 py-3 rounded-lg transition-colors ${
                   currentPage === item.page
-                    ? 'text-foreground bg-[var(--forest-green)]/10'
-                    : 'text-muted-foreground hover:bg-[var(--warm-neutral)]'
+                    ? "text-foreground bg-[var(--forest-green)]/10"
+                    : "text-muted-foreground hover:bg-[var(--warm-neutral)]"
                 }`}
               >
                 {item.label}
