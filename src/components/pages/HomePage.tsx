@@ -1,6 +1,11 @@
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
-import homeImage from "../../assets/speaking-rbc.png";
+// import homeImage from "../../assets/speaking-rbc.png";
+import homeImage from "../../assets/twin-peaks.jpg";
+import peruImage from "../../assets/machu-picchu.jpg";
+import caminoImage from "../../assets/camino-de-santiago.jpg";
+import germanyImage from "../../assets/neuschwanstein-castle.jpg";
+import rowingImage from "../../assets/rowing-eight.jpg";
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
@@ -80,31 +85,32 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
   const adventures = [
     {
-      image:
-        "https://images.unsplash.com/photo-1730677902503-b9961fef6ff3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNodSUyMHBpY2NodSUyMHRyYWlsfGVufDF8fHx8MTc2MTc5MjQ4MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Lares Trail to Machu Picchu",
+      image: peruImage,
+      title: "Lares Trek to Machu Picchu",
       location: "Peru",
+      capturedBy: "me",
       article: "machu-picchu",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1563301939-90dd23ea8736?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYW1pbm8lMjBkZSUyMHNhbnRpYWdvJTIwcGF0aHxlbnwxfHx8fDE3NjE3MzMyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: caminoImage,
       title: "Camino de Santiago",
       location: "Spain",
+      capturedBy: "me",
       article: "camino-santiago",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1628620800752-22c87470256d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYW5hZGlhbiUyMHJvY2tpZXMlMjBsYW5kc2NhcGV8ZW58MXx8fHwxNzYxNzY2OTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Canadian Rockies",
-      location: "Canada",
+      image: germanyImage,
+      title: "My First Solo Backpacking Trip",
+      location: "Germany & Czech Republic",
+      capturedBy: "me",
       article: "canadian-rockies",
     },
+
     {
-      image:
-        "https://images.unsplash.com/photo-1639107096036-44f1b54bd6f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb3dpbmclMjBib2F0JTIwd2F0ZXJ8ZW58MXx8fHwxNzYxNzkyNDgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: rowingImage,
       title: "Varsity Rowing",
       location: "University of Waterloo",
+      capturedBy: "Barry McClusky",
       article: "rowing",
     },
   ];
@@ -256,6 +262,22 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   className="rounded-2xl w-full h-[288px] object-cover shadow-lg"
                 />
               </motion.div>
+              {/* Anchored to right top */}
+              {/* <motion.div
+                className="relative"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-[var(--soft-blue)] to-[var(--forest-green)] opacity-10 rounded-2xl transform rotate-3" />
+                <ImageWithFallback
+                  src={homeImage}
+                  alt="Isabelle speaking to 500+ students and professionals at RBC"
+                  className="rounded-2xl w-full object-cover shadow-lg"
+                  style={{ height: "288px", objectPosition: "right top" }}
+                />
+              </motion.div> */}
             </div>
           </motion.div>
         </div>
@@ -338,12 +360,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl mb-6">🌍 Life Outside Work</h2>
-            <p className="text-lg text-muted-foreground mb-12 max-w-3xl">
-              I believe the best product builders are also explorers. Whether
+            <h2 className="text-3xl md:text-4xl mb-6">🗺️ Life Outside Work</h2>
+            <p className="text-lg text-muted-foreground mb-12 max-w-4xl">
+              Most of my time away from a screen is spent moving. Early mornings
+              on the water, full days on the trail, long runs through new
+              cities. I'm happiest chasing experiences that change how I see the
+              world :)
+              {/* I believe the best product builders are also explorers. Whether
               I'm coxing a rowing crew at sunrise, trekking ancient trails, or
               running through new cities, I'm constantly learning about
-              resilience, teamwork, and the power of showing up.
+              resilience, teamwork, and the power of showing up. */}
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -363,11 +389,17 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
-                    <div className="text-white">
+                    {/* <div className="text-white">
                       <h4 className="text-lg mb-1">{adventure.title}</h4>
                       <p className="text-sm text-white/80">
                         {adventure.location}
-                      </p>
+                      </p> */}
+                    <div className="text-white w-full">
+                      <h4 className="text-lg mb-1">{adventure.title}</h4>
+                      <div className="flex justify-between items-center text-sm text-white/80">
+                        <span>{adventure.location}</span>
+                        <span>Captured by {adventure.capturedBy}</span>
+                      </div>
                     </div>
                   </div>
                 </motion.button>
