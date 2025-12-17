@@ -21,8 +21,8 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   }, []);
 
   const navItems = [
-    { label: "About", page: "about" },
     { label: "Work", page: "work" },
+    { label: "About", page: "about" },
     { label: "Writing", page: "writing" },
     // { label: 'Contact', page: 'contact' },
   ];
@@ -31,17 +31,17 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-10 lg:px-16 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm"
           : "bg-white/95 backdrop-blur-md md:bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-20">
           <motion.button
             onClick={() => onNavigate("home")}
-            className="text-lg tracking-tight"
+            className="text-lg tracking-tight cursor-pointer"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -54,9 +54,9 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               <motion.button
                 key={item.page}
                 onClick={() => onNavigate(item.page)}
-                className={`relative px-1 py-2 transition-colors ${
+                className={`relative px-1 py-2 transition-colors cursor-pointer ${
                   currentPage === item.page
-                    ? "text-foreground"
+                    ? "text-foreground font-medium"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
                 whileHover={{ scale: 1.05 }}
@@ -76,7 +76,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-[var(--forest-green)]"
+            className="md:hidden p-2 text-[var(--forest-green)] cursor-pointer hover:bg-[var(--forest-green)]/10 rounded-lg transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -97,9 +97,9 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                   onNavigate(item.page);
                   setIsMobileMenuOpen(false);
                 }}
-                className={`block w-full text-left px-4 py-3 rounded-lg transition-colors ${
+                className={`block w-full text-left px-4 py-3 rounded-lg transition-colors cursor-pointer ${
                   currentPage === item.page
-                    ? "text-foreground bg-[var(--forest-green)]/10"
+                    ? "text-foreground bg-[var(--forest-green)]/10 font-medium"
                     : "text-muted-foreground hover:bg-[var(--warm-neutral)]"
                 }`}
               >

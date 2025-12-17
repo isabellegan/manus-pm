@@ -104,9 +104,9 @@ export function AboutPage() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-16">
+    <div className="min-h-screen pt-32">
       {/* Hero */}
-      <section className="px-6 lg:px-12 mb-24">
+      <section className="px-10 lg:px-16 mb-24">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -144,7 +144,7 @@ export function AboutPage() {
       </section>
 
       {/* My Story - Interactive Timeline */}
-      <section className="px-6 lg:px-12 mb-24 relative overflow-hidden">
+      <section className="px-10 lg:px-16 mb-26 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -227,7 +227,7 @@ export function AboutPage() {
       </section>
 
       {/* What I'm Exploring - Carousel */}
-      <section className="px-6 lg:px-12 mb-24">
+      <section className="px-10 lg:px-16 mb-24">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -298,13 +298,13 @@ export function AboutPage() {
               {/* Navigation Buttons - Desktop */}
               <button
                 onClick={prevInterest}
-                className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white hover:bg-[var(--forest-green)] hover:text-white rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 z-10"
+                className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white hover:bg-[var(--forest-green)] hover:text-white rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 z-10 cursor-pointer"
               >
                 <ChevronLeft size={24} />
               </button>
               <button
                 onClick={nextInterest}
-                className="absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white hover:bg-[var(--forest-green)] hover:text-white rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 z-10"
+                className="absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white hover:bg-[var(--forest-green)] hover:text-white rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 z-10 cursor-pointer"
               >
                 <ChevronRight size={24} />
               </button>
@@ -337,7 +337,7 @@ export function AboutPage() {
                     <div className="flex justify-between">
                       <button
                         onClick={prevInterest}
-                        className="w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
+                        className="w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all cursor-pointer"
                       >
                         <ChevronLeft
                           size={20}
@@ -346,7 +346,7 @@ export function AboutPage() {
                       </button>
                       <button
                         onClick={nextInterest}
-                        className="w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
+                        className="w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all cursor-pointer"
                       >
                         <ChevronRight
                           size={20}
@@ -395,7 +395,7 @@ export function AboutPage() {
                 <button
                   key={index}
                   onClick={() => setCurrentInterestIndex(index)}
-                  className={`h-2 rounded-full transition-all ${
+                  className={`h-2 rounded-full transition-all cursor-pointer ${
                     index === currentInterestIndex
                       ? "bg-[var(--forest-green)] w-8"
                       : "bg-gray-300 hover:bg-gray-400 w-2"

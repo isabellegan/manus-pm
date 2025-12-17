@@ -116,9 +116,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
   ];
 
   return (
-    <div className="min-h-screen pb-8">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-6 lg:px-12 min-h-[90vh] flex items-center relative overflow-hidden">
+      <section className="pt-32 pb-24 px-10 lg:px-16 min-h-[90vh] flex items-center relative overflow-hidden">
         {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--warm-neutral)] via-white to-[#e3f2f5] opacity-60 -z-10" />
 
@@ -149,20 +149,22 @@ export function HomePage({ onNavigate }: HomePageProps) {
             >
               {/* I’m Isabelle. I build AI products, train as an endurance athlete,
               and believe the best technology feels like magic. */}
-              I’m Isabelle, an endurance athlete who works with AI systems and
-              believes the best technology feels like magic.
+              {/* I’m Isabelle, an endurance athlete who works with AI systems and
+              believes the best technology feels like magic. */}
+              I’m Isabelle, an endurance athlete who believes the best
+              technology feels like magic.
             </motion.p>
 
             <motion.div {...fadeInUp} className="flex flex-wrap gap-4">
               <button
                 onClick={() => onNavigate("work")}
-                className="px-6 py-3 bg-[var(--forest-green)] text-white rounded-lg hover:bg-[var(--deep-navy)] transition-all flex items-center gap-2 group"
+                className="px-6 py-3 bg-[var(--forest-green)] text-white rounded-lg hover:bg-[var(--deep-navy)] transition-all flex items-center gap-2 group cursor-pointer"
               >
                 Explore my work
               </button>
               <button
-                onClick={() => onNavigate("contact")}
-                className="px-6 py-3 border border-border rounded-lg hover:border-[var(--forest-green)] hover:text-[var(--forest-green)] transition-all"
+                onClick={() => onNavigate("about")}
+                className="px-6 py-3 border border-border rounded-lg hover:border-[var(--forest-green)] hover:text-[var(--forest-green)] transition-all cursor-pointer"
               >
                 Discover my story
                 {/* Read my story */}
@@ -174,7 +176,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* About Preview */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
+      <section className="py-24 px-10 lg:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -205,9 +207,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
                 >
-                  I study Cognitive Science & Computing at the University of
-                  Waterloo, where that early curiosity now guides my focus on
-                  how technology interacts with humans.
+                  Now, I study Cognitive Science & Computing at the University
+                  of Waterloo, where that early curiosity guides my focus on how
+                  technology interacts with humans.
                   {/* I study Cognitive Science and Computing at the University of
                   Waterloo, where that early curiosity now shapes my focus on
                   how systems think, respond, and interact with humans.  */}
@@ -284,7 +286,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Experience Timeline */}
-      <section className="py-24 px-6 lg:px-12">
+      <section className="py-24 px-10 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -306,7 +308,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     stiffness: 100,
                   }}
                   whileHover={{ x: 5, transition: { duration: 0.2 } }}
-                  className="relative flex gap-6 pb-8 last:pb-0 cursor-default"
+                  className="relative flex gap-6 pb-4 last:pb-0 cursor-default"
                 >
                   {/* Logo */}
                   <motion.div
@@ -352,7 +354,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Life Outside Work */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
+      <section className="py-24 px-10 lg:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

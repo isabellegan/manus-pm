@@ -75,7 +75,7 @@ export function ContactPage() {
   return (
     <div className="min-h-screen pt-32 pb-24">
       {/* Hero with Image */}
-      <section className="px-6 lg:px-12 mb-24">
+      <section className="px-10 lg:px-16 mb-24">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -109,7 +109,7 @@ export function ContactPage() {
       </section>
 
       {/* Why Reach Out */}
-      <section className="px-6 lg:px-12 mb-24 bg-white py-16">
+      <section className="px-10 lg:px-16 mb-24 bg-white py-16">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -144,7 +144,7 @@ export function ContactPage() {
       </section>
 
       {/* Contact Methods */}
-      <section className="px-6 lg:px-12 mb-24">
+      <section className="px-10 lg:px-16 mb-24">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -186,7 +186,7 @@ export function ContactPage() {
       </section>
 
       {/* Personal Note */}
-      <section className="px-6 lg:px-12 mb-24">
+      <section className="px-10 lg:px-16 mb-24">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -249,7 +249,7 @@ export function ContactPage() {
       </section>
 
       {/* Quote */}
-      <section className="px-6 lg:px-12">
+      <section className="px-10 lg:px-16">
         <div className="max-w-3xl mx-auto text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}

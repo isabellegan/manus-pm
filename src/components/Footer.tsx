@@ -15,8 +15,8 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-white border-t border-border mt-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
+    <footer className="bg-white border-t border-border px-10 lg:px-12 py-12">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div className="space-y-3">
             <p className="max-w-md text-[var(--forest-green)]">
@@ -33,7 +33,7 @@ export function Footer() {
                 key={link.label}
                 href={link.href}
                 aria-label={link.label}
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

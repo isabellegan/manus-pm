@@ -1,7 +1,15 @@
-import { motion } from 'motion/react';
-import { Mail, Linkedin, Github, Twitter, MapPin, Clock, Sparkles } from 'lucide-react';
-import { ImageWithFallback } from '../figma/ImageWithFallback';
-import { useState } from 'react';
+import { motion } from "motion/react";
+import {
+  Mail,
+  Linkedin,
+  Github,
+  Twitter,
+  MapPin,
+  Clock,
+  Sparkles,
+} from "lucide-react";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { useState } from "react";
 
 export function ContactPage() {
   const [hoveredMethod, setHoveredMethod] = useState<number | null>(null);
@@ -9,70 +17,74 @@ export function ContactPage() {
   const contactMethods = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'isabelle@example.com',
-      href: 'mailto:isabelle@example.com',
-      description: 'Best for thoughtful conversations',
-      color: 'from-blue-500 to-cyan-500',
+      label: "Email",
+      value: "isabelle@example.com",
+      href: "mailto:isabelle@example.com",
+      description: "Best for thoughtful conversations",
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Linkedin,
-      label: 'LinkedIn',
-      value: 'isabelleGan',
-      href: '#',
-      description: 'Let\'s connect professionally',
-      color: 'from-blue-600 to-indigo-600',
+      label: "LinkedIn",
+      value: "isabelleGan",
+      href: "#",
+      description: "Let's connect professionally",
+      color: "from-blue-600 to-indigo-600",
     },
     {
       icon: Github,
-      label: 'GitHub',
-      value: 'isabelleGan',
-      href: '#',
-      description: 'Check out my code',
-      color: 'from-gray-700 to-gray-900',
+      label: "GitHub",
+      value: "isabelleGan",
+      href: "#",
+      description: "Check out my code",
+      color: "from-gray-700 to-gray-900",
     },
     {
       icon: Twitter,
-      label: 'Twitter',
-      value: '@isabelleGan',
-      href: '#',
-      description: 'Quick thoughts & updates',
-      color: 'from-sky-400 to-blue-500',
+      label: "Twitter",
+      value: "@isabelleGan",
+      href: "#",
+      description: "Quick thoughts & updates",
+      color: "from-sky-400 to-blue-500",
     },
   ];
 
   const reasons = [
     {
-      emoji: '🚀',
-      title: 'Building something',
-      description: 'Working on an AI product, need a product thinker, or want to collaborate on something ambitious',
+      emoji: "🚀",
+      title: "Building something",
+      description:
+        "Working on an AI product, need a product thinker, or want to collaborate on something ambitious",
     },
     {
-      emoji: '💡',
-      title: 'Exploring ideas',
-      description: 'Product strategy, AI ethics, user research, or systems thinking conversations',
+      emoji: "💡",
+      title: "Exploring ideas",
+      description:
+        "Product strategy, AI ethics, user research, or systems thinking conversations",
     },
     {
-      emoji: '🎤',
-      title: 'Speaking & teaching',
-      description: 'Workshops, talks, or teaching about product, AI, building for humans',
+      emoji: "🎤",
+      title: "Speaking & teaching",
+      description:
+        "Workshops, talks, or teaching about product, AI, building for humans",
     },
     {
-      emoji: '🏔️',
-      title: 'Adventure buddies',
-      description: 'Rowing crew, trekking partner, or trail recommendations',
+      emoji: "🏔️",
+      title: "Adventure buddies",
+      description: "Rowing crew, trekking partner, or trail recommendations",
     },
     {
-      emoji: '☕',
-      title: 'Just curious',
-      description: 'Fellow builder, researcher, or curious human wanting to chat',
+      emoji: "☕",
+      title: "Just curious",
+      description:
+        "Fellow builder, researcher, or curious human wanting to chat",
     },
   ];
 
   return (
     <div className="min-h-screen pt-32 pb-16">
       {/* Hero - Split Layout */}
-      <section className="px-6 lg:px-12 mb-24">
+      <section className="px-10 lg:px-16 mb-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Left: Main content */}
@@ -82,34 +94,46 @@ export function ContactPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <motion.div 
+                <motion.div
                   className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--forest-green)]/10 rounded-full mb-6"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.2, type: "spring" }}
                 >
                   <Sparkles size={16} className="text-[var(--forest-green)]" />
-                  <span className="text-sm text-[var(--forest-green)]">Currently available for projects</span>
+                  <span className="text-sm text-[var(--forest-green)]">
+                    Currently available for projects
+                  </span>
                 </motion.div>
 
                 <h1 className="text-4xl md:text-6xl mb-6">
                   Let's build something
-                  <span className="block text-[var(--forest-green)]">together</span>
+                  <span className="block text-[var(--forest-green)]">
+                    together
+                  </span>
                 </h1>
-                
+
                 <p className="text-xl text-muted-foreground mb-8">
-                  I'm always excited to meet fellow builders, researchers, adventurers, and curious minds.
+                  I'm always excited to meet fellow builders, researchers,
+                  adventurers, and curious minds.
                 </p>
 
                 <div className="space-y-6 mb-12">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-[var(--soft-blue)]/20 flex items-center justify-center flex-shrink-0">
-                      <MapPin size={20} className="text-[var(--forest-green)]" />
+                      <MapPin
+                        size={20}
+                        className="text-[var(--forest-green)]"
+                      />
                     </div>
                     <div>
                       <h3 className="mb-1">Based in</h3>
-                      <p className="text-muted-foreground">Toronto & Singapore</p>
-                      <p className="text-sm text-muted-foreground mt-1">But always reachable online</p>
+                      <p className="text-muted-foreground">
+                        Toronto & Singapore
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        But always reachable online
+                      </p>
                     </div>
                   </div>
 
@@ -119,19 +143,30 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h3 className="mb-1">Response time</h3>
-                      <p className="text-muted-foreground">Usually 24-48 hours</p>
-                      <p className="text-sm text-muted-foreground mt-1">I read and respond to everything personally</p>
+                      <p className="text-muted-foreground">
+                        Usually 24-48 hours
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        I read and respond to everything personally
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-[var(--soft-blue)]/20 flex items-center justify-center flex-shrink-0">
-                      <Sparkles size={20} className="text-[var(--forest-green)]" />
+                      <Sparkles
+                        size={20}
+                        className="text-[var(--forest-green)]"
+                      />
                     </div>
                     <div>
                       <h3 className="mb-1">Languages</h3>
-                      <p className="text-muted-foreground">English, French, Mandarin</p>
-                      <p className="text-sm text-muted-foreground mt-1">Feel free to reach out in any of these</p>
+                      <p className="text-muted-foreground">
+                        English, French, Mandarin
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Feel free to reach out in any of these
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -160,24 +195,43 @@ export function ContactPage() {
                       transition={{ delay: index * 0.1 + 0.3 }}
                       whileHover={{ scale: 1.02, x: 5 }}
                       className={`block p-6 rounded-2xl border-2 transition-all ${
-                        hoveredMethod === index 
-                          ? 'border-[var(--forest-green)] shadow-lg bg-gradient-to-br ' + method.color + ' bg-opacity-5'
-                          : 'border-border bg-white'
+                        hoveredMethod === index
+                          ? "border-[var(--forest-green)] shadow-lg bg-gradient-to-br " +
+                            method.color +
+                            " bg-opacity-5"
+                          : "border-border bg-white"
                       }`}
                     >
                       <div className="flex items-center gap-4">
-                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all ${
-                          hoveredMethod === index 
-                            ? 'bg-gradient-to-br ' + method.color
-                            : 'bg-[var(--warm-neutral)]'
-                        }`}>
-                          <Icon size={20} className={hoveredMethod === index ? 'text-white' : 'text-[var(--forest-green)]'} />
+                        <div
+                          className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all ${
+                            hoveredMethod === index
+                              ? "bg-gradient-to-br " + method.color
+                              : "bg-[var(--warm-neutral)]"
+                          }`}
+                        >
+                          <Icon
+                            size={20}
+                            className={
+                              hoveredMethod === index
+                                ? "text-white"
+                                : "text-[var(--forest-green)]"
+                            }
+                          />
                         </div>
                         <div className="flex-1">
-                          <h4 className={`mb-1 transition-colors ${hoveredMethod === index ? 'text-[var(--forest-green)]' : ''}`}>
+                          <h4
+                            className={`mb-1 transition-colors ${
+                              hoveredMethod === index
+                                ? "text-[var(--forest-green)]"
+                                : ""
+                            }`}
+                          >
                             {method.label}
                           </h4>
-                          <p className="text-sm text-muted-foreground">{method.value}</p>
+                          <p className="text-sm text-muted-foreground">
+                            {method.value}
+                          </p>
                         </div>
                       </div>
                     </motion.a>
@@ -190,7 +244,7 @@ export function ContactPage() {
       </section>
 
       {/* Good Reasons - Bento Grid */}
-      <section className="px-6 lg:px-12 mb-24 bg-gradient-to-br from-[var(--soft-blue)]/5 via-white to-[var(--forest-green)]/5 py-24">
+      <section className="px-10 lg:px-16 mb-24 bg-gradient-to-br from-[var(--soft-blue)]/5 via-white to-[var(--forest-green)]/5 py-24">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -199,7 +253,9 @@ export function ContactPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl mb-4">Good reasons to reach out</h2>
+              <h2 className="text-3xl md:text-4xl mb-4">
+                Good reasons to reach out
+              </h2>
               <p className="text-lg text-muted-foreground">
                 (But honestly, you don't need a reason — just say hi!)
               </p>
@@ -213,11 +269,14 @@ export function ContactPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+                  whileHover={{
+                    y: -8,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  }}
                   className="relative p-8 bg-white rounded-2xl border-2 border-border hover:border-[var(--forest-green)] transition-all cursor-default overflow-hidden group"
                 >
                   <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-[var(--soft-blue)]/10 to-[var(--forest-green)]/10 rounded-bl-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform" />
-                  
+
                   <div className="relative">
                     <div className="text-4xl mb-4">{reason.emoji}</div>
                     <h4 className="text-lg mb-3 group-hover:text-[var(--forest-green)] transition-colors">
@@ -235,7 +294,7 @@ export function ContactPage() {
       </section>
 
       {/* Personal CTA */}
-      <section className="px-6 lg:px-12">
+      <section className="px-10 lg:px-16">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -266,8 +325,9 @@ export function ContactPage() {
                   Let's grab coffee ☕
                 </h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl">
-                  Whether you want to brainstorm a product idea, discuss AI ethics over tea, 
-                  compare notes on trekking routes, or just say hi — I'd genuinely love to hear from you.
+                  Whether you want to brainstorm a product idea, discuss AI
+                  ethics over tea, compare notes on trekking routes, or just say
+                  hi — I'd genuinely love to hear from you.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
