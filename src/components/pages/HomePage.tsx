@@ -1,5 +1,14 @@
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
+// Logo Imports
+import waterlooLogo from "../../assets/logos/university-of-waterloo.svg";
+import blueprintLogo from "../../assets/logos/blueprint.svg";
+import pogoLogo from "../../assets/logos/pogo.svg";
+import sapLogo from "../../assets/logos/sap.svg";
+import azomaLogo from "../../assets/logos/azoma.svg";
+import trainLogo from "../../assets/logos/train-fitness.svg";
+import marketangeloLogo from "../../assets/logos/marketangelo.svg";
+
 // import homeImage from "../../assets/speaking-rbc.png";
 import homeImage from "../../assets/twin-peaks.jpg";
 import peruImage from "../../assets/machu-picchu.jpg";
@@ -28,59 +37,100 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
   const experiences = [
     {
-      title: "Strategy Consulting",
-      company: "SAP",
-      location: "Toronto, Canada",
-      description:
-        "Guided enterprise clients through digital transformation, translating business challenges into technology solutions.",
-      period: "2023 - Present",
-      logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=200&fit=crop",
-    },
-    {
-      title: "AI Product",
-      company: "Train Fitness",
-      location: "Remote",
-      description:
-        "Built AI-powered fitness experiences, transforming how users engage with personalized training.",
-      period: "2023",
-      logo: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=200&h=200&fit=crop",
-    },
-    {
-      title: "Product",
-      company: "Wave Connect",
-      location: "Remote",
-      description:
-        "Designed and shipped communication tools connecting distributed teams across time zones.",
-      period: "2022",
-      logo: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&h=200&fit=crop",
-    },
-    {
-      title: "Prompt Engineering",
-      company: "Ecomtent",
-      location: "Remote",
-      description:
-        "Pioneered AI content generation workflows for e-commerce at scale.",
-      period: "2022",
-      logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&h=200&fit=crop",
-    },
-    {
-      title: "ML Research",
-      company: "WAT.ai",
+      title: "Research Assistant",
+      company: "University of Waterloo",
+      companyUrl: "https://uwaterloo.ca",
       location: "Waterloo, Canada",
       description:
-        "Researched neural network architectures and contributed to open-source ML frameworks.",
-      period: "2021 - 2022",
-      logo: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&h=200&fit=crop",
+        "Investigate the Einstellung Effect in human–AI interaction by examining how incorrect LLM outputs influence user reasoning and behavior.",
+      period: "Nov 2025 - Present",
+      logo: waterlooLogo,
     },
     {
-      title: "VC Fellowships",
-      company: "Pear VC, RippleX, DRF",
-      location: "San Francisco, Remote",
+      title: "Product Manager",
+      company: "UW Blueprint",
+      companyUrl: "https://uwblueprint.org",
+      location: "Waterloo, Canada",
       description:
-        "Evaluated early-stage startups, building frameworks for product-market fit assessment.",
-      period: "2021 - 2023",
-      logo: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=200&h=200&fit=crop",
+        "Lead E2E product development cross-functionally with engineers and designers, automating workflows to save users 15+ hours per month.",
+      period: "Aug 2025 - Present",
+      logo: blueprintLogo,
     },
+    {
+      title: "GTM & User Research Intern",
+      company: "Pogo",
+      companyUrl: "https://joinpogo.com",
+      location: "New York, USA (Remote)",
+      description:
+        "Owned early launch and iteration of an AI-first product to 25K+ users, translating real-world behavioral insights into continuous improvement.",
+      // description:
+      //   "Drove user research for an AI-first product, translating behavioral patterns and qualitative/quantitative insights into structured product requirements.",
+      period: "Jul 2025 - Dec 2025",
+      logo: pogoLogo,
+    },
+    {
+      title: "Technology Consulting Intern",
+      company: "SAP",
+      companyUrl: "https://www.sap.com",
+      location: "Toronto, Canada",
+      description:
+        "Evaluated AI-enabled enterprise workflows across Fortune 500 clients, benchmarking solutions to inform data-driven transformation roadmaps.",
+      // description:
+      //   "Evaluated enterprise workflows across Fortune 500 clients, benchmarking solutions into data-driven recommendations and transformation roadmaps.",
+      // description:
+      //   "Guided Fortune 500 clients through digital transformation, translating business challenges into technology solutions.",
+      period: "May 2024 - Aug 2024",
+      logo: sapLogo,
+    },
+    {
+      title: "Prompt Engineering Intern",
+      company: "Azoma",
+      companyUrl: "https://azoma.ai",
+      location: "San Francisco, USA (Remote)",
+      description:
+        "Designed and tested prompt experiments to evaluate and improve LLM behavior and task performance in real-world use cases.",
+      period: "Oct 2023 - Dec 2023",
+      logo: azomaLogo,
+    },
+    {
+      title: "AI Product Manager Intern",
+      company: "Train Fitness",
+      companyUrl: "https://www.trainfitness.ai",
+      location: "Toronto, Canada",
+      description:
+        "Iterated on onboarding flows for an AI-powered mobile and IoT product, grounded in user insights and competitive analysis.",
+      period: "Jun 2023 - Aug 2023",
+      logo: trainLogo,
+    },
+    {
+      title: "Co-Founder & Director of Product",
+      company: "MarketAngelo",
+      companyUrl:
+        "https://www.jacentralontario.org/ja-central-ontario-student-business-named-ja-americas-company-of-the-year/",
+      location: "Toronto, Canada",
+      description:
+        "Shipped a cross-functional product from concept to MVP, placing top 6 globally and earning $15K+ in funding with partners including PayPal.",
+      period: "Sep 2020 - Apr 2022",
+      logo: marketangeloLogo,
+    },
+    // {
+    //   title: "ML Research",
+    //   company: "WAT.ai",
+    //   location: "Waterloo, Canada",
+    //   description:
+    //     "Researched neural network architectures and contributed to open-source ML frameworks.",
+    //   period: "2021 - 2022",
+    //   logo: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&h=200&fit=crop",
+    // },
+    // {
+    //   title: "VC Fellowships",
+    //   company: "Pear VC, RippleX, DRF",
+    //   location: "San Francisco, Remote",
+    //   description:
+    //     "Evaluated early-stage startups, building frameworks for product-market fit assessment.",
+    //   period: "2021 - 2023",
+    //   logo: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=200&h=200&fit=crop",
+    // },
   ];
 
   const adventures = [
@@ -151,8 +201,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
               and believe the best technology feels like magic. */}
               {/* I’m Isabelle, an endurance athlete who works with AI systems and
               believes the best technology feels like magic. */}
-              I’m Isabelle, an endurance athlete who believes the best
-              technology feels like magic.
+              I’m Isabelle, a product manager and endurance athlete who believes
+              the best technology feels like magic.
             </motion.p>
 
             <motion.div {...fadeInUp} className="flex flex-wrap gap-4">
@@ -294,7 +344,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl mb-12">💼 Experience</h2>
+            <h2 className="text-3xl md:text-4xl mb-6">👩‍💻 Product & AI Work</h2>
+            <p className="text-lg text-muted-foreground mb-12 max-w-4xl">
+              Where I’ve spent my time learning and building since I was 16.
+            </p>
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <motion.div
@@ -332,10 +385,19 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   <div className="flex-1 pl-6">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
                       <div>
-                        <h4 className="text-lg">{exp.title}</h4>
-                        <p className="text-[var(--forest-green)]">
+                        {/* <h4 className="text-lg font-semibold">{exp.title}</h4> */}
+                        <h4 className="text-lg" style={{ fontWeight: 500 }}>
+                          {exp.title}
+                        </h4>
+                        <a
+                          href={exp.companyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[var(--forest-green)] hover:underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
                           {exp.company}
-                        </p>
+                        </a>
                         <p className="text-sm text-muted-foreground">
                           {exp.location}
                         </p>
